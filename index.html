@@ -33,26 +33,36 @@
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <!-- <script src="../js/bootstrap.min.js"></script> -->
  <script>
+ 	let results = []
  	let cont = document.querySelector('#content')
- 	let search = document.querySelector('#search').value
+ 	const search = document.querySelector('#search')
  	let subbtn = document.querySelector('#submit')
  	fetch('https://abdullahiabdulkabir.github.io/LASG-NPF/js/numbers.json')
-  .then((response) => {
-    return response.json();
-    // console.log(response)
-  })
-  .then((data) => {
+	  .then((response) => {
+	    return response.json();
+	    // console.log(response)
+	  })
+ 	 .then((data) => {
+ 	 	let res = search.value
   	for (var key in data) {		
- 	let badge = document.createElement('div');
+ 		let badge = document.createElement('div');
   		// console.log(data[key].name)
 
-  		badge.innerHTML = '<div class="card text-center"><h5 class="card-header">'+data[key].name+'</h5><div class="card-body"><p class="card-text"></p><a href="tel:'+data[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></div><br>'
+  		badge.innerHTML = '<div class="card text-center"><h5 class="card-header">'+data[key].name+'<a href="tel:'+data[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></h5><br>'
   		cont.appendChild(badge)   
+	  	subbtn.addEventListener('click',function(argument) {
+		    	console.log(res);
+		    for (var i=0 ; i < data.length ; i++)
+			{
+			    if (data[i]['name'] == res) {
+		    	break;
+			        // results.push(data[i]);
+			    }
+			}
+	  
+	  	})
 	}
+	
   });
-  subbtn.addEventListener('click',function(argument) {
-    console.log("search");
-  	// body...
-  })
  </script>
 </html>
