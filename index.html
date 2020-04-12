@@ -34,16 +34,14 @@
  <!-- <script src="../js/bootstrap.min.js"></script> -->
  <script>
  	let cont = document.querySelector('#content')
- 	let badge = document.createElement('div');
  	fetch('https://abdullahiabdulkabir.github.io/LASG-NPF/js/numbers.json')
   .then((response) => {
     return response.json();
     // console.log(response)
   })
   .then((data) => {
-  	for (var key in data) {
-  		// console.log(data[key])
-  		
+  	for (var key in data) {		
+ 	let badge = document.createElement('div');
   		// console.log(data[key].name)
 
   		badge.innerHTML = '<div class="card text-center"><h5 class="card-header">'+data[key].name+'</h5><div class="card-body"><p class="card-text"></p><a href="tel:'+data[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></div><br>'
