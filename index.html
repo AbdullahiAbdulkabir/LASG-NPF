@@ -12,7 +12,7 @@
 
 </head>
 <body>
-	<div class="container col-4 ">
+	<div class="container col-7 ">
 		<h2 class="text-center" style="color: red;">Emergency Numbers Lagos State Police Command</h2>
 		<!-- <div class="justify-content-center"> -->
 		<fieldset class="justify-content-center form-group " >
@@ -42,12 +42,14 @@
   })
   .then((data) => {
   	for (var key in data) {
+  		// console.log(data[key])
+  		
   		// console.log(data[key].name)
 
   		badge.innerHTML = '<div class="card text-center"><h5 class="card-header">'+data[key].name+'</h5><div class="card-body"><p class="card-text"></p><a href="tel:'+data[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></div><br>'
   		cont.appendChild(badge)
   		// console.log(cont)
-	    
+	   
 	}
     // console.log(data);
   });
