@@ -14,30 +14,25 @@
 <body>
 	<div class="container  ">
 		<h2 class="text-center" style="color: red;">Emergency Numbers Lagos State Police Command</h2>
-		<!-- <div class="justify-content-center"> -->
 		<fieldset class="justify-content-center form-group " >
-		<!-- <form class="form-inline" action=""> -->
-			
 		<input type="text" class="form-control" id="search" placeholder="search">
-		<input type="submit" id="submit" class="btn btn-primary">
-		<!-- </form> -->
 			<div id="content">
 				
 			</div>
 			
 			
 		</fieldset>
-		<!-- </div> -->
+		
 	</div>
 </body>
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <!-- <script src="../js/bootstrap.min.js"></script> -->
  <script>
- 	let results = []
+ 	
  	let filtered;
  	let cont = document.querySelector('#content')
  	const search = document.querySelector('#search')
- 	let subbtn = document.querySelector('#submit')
+ 	
  	fetch('https://abdullahiabdulkabir.github.io/LASG-NPF/js/numbers.json')
 	  .then((response) => {
 	    return response.json();
@@ -53,15 +48,14 @@
   		cont.appendChild(badge)   
 	  	
 	}
-	subbtn.addEventListener('click',function() {
+	search.addEventListener('input',function() {
 		let ee= search.value.toUpperCase()
 		filtered = data.filter(el => el.name.includes(ee));
-	    console.log(filtered)    	
+	    // console.log(filtered)    	
 			if(search){cont.innerHTML = ''}
 			for (var key in filtered) {	
  			let b = document.createElement('div');
 			b.innerHTML = '<div class="card text-center"><h5 class="card-header">'+filtered[key].name+'<a href="tel:'+filtered[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></h5><br>'
-
   			cont.appendChild(b) 
 			// console.log(filtered);
   			}
