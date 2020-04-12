@@ -2,54 +2,30 @@
 <html>
 <head>
 	<title>LASG NPF Emergency Numbers</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">  
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
      <link rel="stylesheet" href="css/index.css">
+
 </head>
 <body>
 	<div class="container col-4 ">
 		<h2 class="text-center" style="color: red;">Emergency Numbers Lagos State Police Command</h2>
 		<!-- <div class="justify-content-center"> -->
-		<fieldset class="justify-content-center form-group">
+		<fieldset class="justify-content-center form-group " >
 		<form class="form-inline" action="">
 			
 		<input type="text" class="form-control" placeholder="search">
 		<input type="submit" class="btn btn-primary">
 		</form>
-
-			<div class="card text-center">
-			  <h5 class="card-header">Control1</h5>
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Special title treatment</h5> -->
-			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			    <a href="tel:09010512285" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a>
-		  	  </div>
-			</div><br>
-			<div class="card text-center">
-			  <h5 class="card-header">Control1</h5>
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Special title treatment</h5> -->
-			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			    <a href="tel:09010512286" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a>
-		  	  </div>
-			</div><br>
-			<div class="card text-center">
-			  <h5 class="card-header">Control1</h5>
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Special title treatment</h5> -->
-			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			    <a href="tel:09010512287" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a>
-		  	  </div>
-			</div><br>
-			<div class="card text-center ct">
-			  <h5 class="card-header">Control1</h5>
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Special title treatment</h5> -->
-			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			    <a href="tel:09010512288" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a>
-		  	  </div>
+			<div id="content">
+				
 			</div>
+			
+			
 		</fieldset>
 		<!-- </div> -->
 	</div>
@@ -57,13 +33,20 @@
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <!-- <script src="../js/bootstrap.min.js"></script> -->
  <script>
+ 	let cont = document.querySelector('#content')
  	fetch('https://abdullahiabdulkabir.github.io/LASG-NPF/js/numbers.json')
   .then((response) => {
     return response.json();
     // console.log(response)
   })
   .then((data) => {
-    console.log(data);
+  	for (var key in data) {
+  		cont.innerHTML = '<div class="card text-center"><h5 class="card-header">'+data[key].name+'</h5><div class="card-body"><p class="card-text">'+'With supporting text below as a natural lead-in to additional content.'+'</p><a href="tel:data[key].number" class="btn btn-primary hvr-grow">'Call'<i class="fa fa-phone call" aria-hidden="true"></i></a></div></div><br>'
+  		// console.log(cont)
+  		// console.log(data[key].name)
+	    
+	}
+    // console.log(data);
   });
  </script>
 </html>
