@@ -2,37 +2,8 @@
 {"name": "CONTROL 1","number": 09010512285},
 { "name": "CONTROL 2","number": 09010512286},
 { "name": "CONTROL 3","number": 09010512287},
-{ "name": "CONTROL 4","number": 09010512288},
+{ "name": "CONTROL 4","number": 09010512288}
 
-{ "name": "AREA COMMANDER 'A LION-BUILDING","number":09010511296},
-{ "name": "DPO VICTORIA ISLAND DIVISION","number": 09010511297},
-{ "name": "DPO DOLPHIN, ESTATE DIVISION","number": 09010511298},
-{ "name": "DPO IKOYI DIVISION ","number":09010511299},
-{ "name": "DPO ONIKAN DIVISION","number": 09010511300},
-{ "name": "DPO ADENIJI-ADELE DIVISION","number": 09010511301},
-{ "name": "DPO EBUTE-ERO DIVISION ","number":09010511302},
-{ "name":" DPO LION-BUILDING DIVISION","number": 0901051130},
-
-{ "name": "AREA COMMANDER 'B' APAPA ","number":0901051130},
-{ "name": "DPO TRINITY DIVISION","number": 0901051130},
-{ "name": "DPO LAYENI DIVISION ","number":0901051130},
-{ "name": "DPO KIRIKIRI DIVISION","number": 0901051130},
-{ "name": "DPO AJEGUNLE DIVISION ","number":0901051130},
-{ "name": "DPO IJORA-BADIA DIVISION","number": 0901051130},
-{ "name": "DPO APAPA DIVISION","number": 0901051131},
-{ "name": "DPO AMUKOKO DIVISION","number":0901051131},
-{ "name": "DPO TOLU DIVISION","number": 0901051131},
-
-{ "name": "AREA COMMANDER 'C' SURULERE","number":0901051131},
-{ "name":" DPO IPONRI DIVISION","number": 0901051131},
-{ "name": "DPO AGUDA DIVISION","number": 0901051131},
-{ "name": "DPO SURULERE DIVISION","number": 0901051131},
-{ "name": "DPO ORILE DIVISION","number": 0901051131},
-{ "name": "DPO BODE-THOMAS DIVISION","number": 0901051131},
-{ "name":"DPO SABO DIVISION","number": 0901051131},
-{ "name": "DPO YABA DIVISION","number": 0901051132},
-{ "name": "DPO DENTON DIVISION ","number":0901051132},
-{ "name": "IDDO POLICE POST, DENTON","number": 09010511322}
 
 
 ]
