@@ -13,7 +13,11 @@ body{
   transition: background-color .1s;
 }
 
-
+h2{
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: arial;
+}
 h3 {
   margin: 0;
   text-transform: uppercase;
