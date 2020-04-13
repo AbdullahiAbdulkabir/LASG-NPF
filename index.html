@@ -22,7 +22,7 @@
 			  </label>
 			    <em>Enable Dark Mode!</em>
 		</div>
-		<fieldset class="justify-content-center form-group " >
+		<fieldset class="" >
 		<input type="text" class="form-control" id="search" placeholder="search by name/area">
 			<div id="content">
 				
@@ -53,7 +53,7 @@
  		let badge = document.createElement('div');
   		// console.log(data[key].name)
 
-  		badge.innerHTML = '<div class="card text-center"><h5 class="">'+data[key].name+'<a href="tel:'+data[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></h5><br>'
+badge.innerHTML = '<div class="card text-center"><h5 class="">'+data[key].name+'<a href="tel:'+data[key].number+'" class="hvr-grow"><i class="fa fa-phone fa-5x call" aria-hidden="true"></i></a></div></h5><br>'
   		cont.appendChild(badge)   
 	  	
 	}
@@ -64,7 +64,7 @@
 			if(search){cont.innerHTML = ''}
 			for (var key in filtered) {	
  			let b = document.createElement('div');
-			b.innerHTML = '<div class="card text-center"><h5 class="card-header">'+filtered[key].name+'<a href="tel:'+filtered[key].number+'" class="btn btn-primary hvr-grow">Call<i class="fa fa-phone call" aria-hidden="true"></i></a></div></h5><br>'
+			b.innerHTML = '<div class="card text-center"><h5 class="">'+filtered[key].name+'<a href="tel:'+filtered[key].number+'" class="hvr-grow"><i class="fa fa-phone fa-5x call" aria-hidden="true"></i></a></div></h5><br>'
   			cont.appendChild(b) 
 			// console.log(filtered);
   			}
