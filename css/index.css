@@ -1,10 +1,42 @@
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
 body{
-	  
-  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);	  
   transition: background-color .1s;
 }
+
+
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+a {
+  color: #6bbc4e;
+  font-weight: 900 !important;
+  text-decoration: none;
+}
+
+.contact-info {
+  padding: 0.6em 0;
+}
 .card{
-	/*background-color: #17141d; */
+	border-radius: 8px;
+    padding: 14px 7px;
+    background: #fff;
+    max-width: 330px;
+    margin: 2vh auto;
+    box-shadow: 0 2px 3px rgba(71, 71, 71, 0.3);
+	background: linear-gradient(to right, #f80759, #bc4e9c); 
 }
 
 .hvr-grow {
@@ -27,13 +59,6 @@ body{
 	margin-top:10px;
 }
 
-:root {
-    --primary-color: #302AE6;
-    --secondary-color: #536390;
-    --font-color: #424242;
-    --bg-color: #fff;
-    --heading-color: #292922;
-}
 
 [data-theme="dark"] {
     --primary-color: #9A97F3;
@@ -41,13 +66,6 @@ body{
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #818cab;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  background-color: var(--bg-color);
-  color: var(--font-color);
- 
 }
 
 .post-meta {
