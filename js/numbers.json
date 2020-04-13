@@ -1,8 +1,8 @@
 [
-{"name": "CONTROL 1","number":  "09010512285"},
-{ "name": "CONTROL 2","number": "09010512286"},
-{ "name": "CONTROL 3","number": "09010512287"},
-{ "name": "CONTROL 4","number": "09010512288"},
+{"name": "COMMAND CONTROL ROOM CONTROL 1","number":  "09010512285"},
+{ "name": "COMMAND CONTROL ROOM CONTROL 2","number": "09010512286"},
+{ "name": "COMMAND CONTROL ROOM CONTROL 3","number": "09010512287"},
+{ "name": "COMMAND CONTROL ROOM CONTROL 4","number": "09010512288"},
 
 { "name": "AREA COMMANDER 'A LION-BUILDING","number":"09010511296"},
 { "name": "DPO VICTORIA ISLAND DIVISION","number": "09010511297"},
