@@ -15,16 +15,16 @@
 
 	<div class="container  ">
 		<div style="display: flex;">
-		<img src="imgs/police.jpg" width="150" alt="" id="npf">
+		<img src="imgs/npf.png" width="150" alt="" id="npf">
 		<h2 class="text-center" style="color: red;">Emergency Numbers Lagos State Police Command</h2>
 		</div>
-		<div class="theme-switch-wrapper justify-content-end">
+		<!-- <div class="theme-switch-wrapper justify-content-end">
 		       <label class="theme-switch" for="checkbox">
 			    <input type="checkbox" id="checkbox" />
 			    <div class="slider round"></div>
 			  </label>
 			    <em>Enable Dark Mode!</em>
-		</div>
+		</div> -->
 		<fieldset class="" >
 		<input type="text" class="form-control" id="search" placeholder="search by name or area in Lagos">
 			<div id="content">
@@ -66,7 +66,7 @@ badge.innerHTML = '<div class="card text-center"><h5 class="">'+data[key].name+'
 			if(search){cont.innerHTML = ''}
 			for (var key in filtered) {	
  			let b = document.createElement('div');
-			b.innerHTML = '<div class="card text-center"><h5 class="">'+filtered[key].name+'<a href="tel:'+filtered[key].number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+			b.innerHTML = '<div class="card text-center"><h5 class="">'+filtered[key].name+'<a href="tel:'+filtered[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
   			cont.appendChild(b) 
 			// console.log(filtered);
   			}

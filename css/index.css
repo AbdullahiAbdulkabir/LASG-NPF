@@ -4,12 +4,13 @@
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
-}
+    --sup-color:#28a745;
+} 
 
 body{
   font-family: "Lato", sans-serif;
-  background-color: var(--bg-color);
-  color: var(--font-color);	  
+  background-color:  #ffc0cb;
+  color:red;	  
   transition: background-color .1s;
 }
 
@@ -29,9 +30,16 @@ a {
   font-weight: 900 !important;
   text-decoration: none;
 }
+#content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px;
+ 
+}
 
 .contact-info {
   padding: 0.6em 0;
+
 }
 .card{
 	border-radius: 8px;
@@ -40,7 +48,13 @@ a {
     max-width: 330px;
     margin: 2vh auto;
     box-shadow: 0 2px 3px rgba(71, 71, 71, 0.3);
-	background: linear-gradient(to right, #f80759, #bc4e9c); 
+	background: whitesmoke; 
+}
+.fa-phone{
+  color: red;
+}
+.fa {
+  font-size: 50px;
 }
 
 .hvr-grow {
@@ -149,4 +163,21 @@ input:checked + .slider:before {
   h2{
     font-size: 1.4em;
   }
+}
+
+/*  */
+@media (max-width: 650px){
+    #npf{
+      width: 50%;
+      height: 50%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .text-center{
+      font-size: 1rem;
+    }
+    #content{
+        display: flex;
+        flex-direction: column;
+    }
 }
