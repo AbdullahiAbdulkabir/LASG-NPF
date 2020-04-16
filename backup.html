@@ -60,7 +60,7 @@
 			let res = search.value
 			for (var key in data) {
 				let badge = document.createElement('div');
-				// console.log(data[key].name)
+				console.log(data)
 
 				badge.innerHTML = '<div class="card text-center"><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 				cont.appendChild(badge)
