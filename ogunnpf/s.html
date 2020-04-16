@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Are</title>
+</head>
+<body id="body">
+
+</body>
+<script >
+	const body = document.querySelector('#body');
+const data = [
+  {
+    "ILARO AREA COMMAND": [
+      { name: "ACP ADEYEMI CHRIS ACPOL ILARO ", number: "07033744245" },
+      { name: "CSP OPEBIYI SUNDAY DPO IDIROKO ", number: "08023347248" },
+      { name: "CSP Olayemi Jacob DPO ILARO ", number: "07039063545" },
+      { name: "SP ADEBAYO HAKEEM DPO IPOKIA ", number: "0806572566" },
+      { name: "SP OLABISI ELEBUTE DPO O-EGBADO ", number: "0812637850" }
+    ]
+  }
+];
+
+const fragment = document.createDocumentFragment();
+
+data.forEach(el => {
+  const title = Object.keys(el)[0];
+  console.log(el)
+//   Checks if title is not no heading
+  if (title.toLowerCase() !== 'no heading') {
+    const header = document.createElement('h1');
+    header.textContent = title;
+    body.append(header);
+  }
+  const table = document.createElement('table');
+  const tableHeader = document.createElement('thead');
+  tableHeader.innerHTML = '<th>Name</th><th>Number</th>';
+  table.append(tableHeader);
+  body.append(table);
+})
+</script>
+</html>

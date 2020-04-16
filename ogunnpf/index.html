@@ -50,15 +50,19 @@
 	    // console.log(response)
 	  })
  	 .then((data) => {
- 	 	let res = search.value
-  	for (var key in data) {		
- 		let badge = document.createElement('div');
-  		// console.log(data[key].name)
-
-badge.innerHTML = '<div class="card text-center"><h5 class="">'+data[key].name+'<a href="tel:'+data[key].number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
-  		cont.appendChild(badge)   
+ 	 	// let res = search.value
+ 	 	data.forEach((el,i)=>{
+ 	 		let head = Object.keys(el)
+ 	 		console.log(el[head])
+		  		console.log(head)
+ 	 		el[head].forEach(e=>{
+		 		let badge = document.createElement('div');
+			badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+		  		cont.appendChild(badge)   
+ 	 		})
 	  	
-	}
+ 	 	})
+	// }
 	search.addEventListener('input',function() {
 		let ee= search.value.toUpperCase()
 		filtered = data.filter(el => el.name.includes(ee));
