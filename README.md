@@ -10,4 +10,4 @@ Feel free to make a Pull Request
 - [Sdkcodes](https://github.com/sdkcodes)
 
 
-[Check live](https://abdullahiabdulkabir.github.io/LASG-NPF/index.html)
+[Check live](http://emajency.com)
