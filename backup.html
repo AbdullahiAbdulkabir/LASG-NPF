@@ -11,9 +11,78 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/backup.css">
 </head>
 <body>
+	<nav class="navr2">
+		<div class="justify-content-start">
+			<img src="imgs/o.PNG" width="200" alt="">
+			<p>Lagos State Police Command</p>
+		</div>
+		
+		<h2 class="justify-content-end">Emergency Numbers</h2>
+	</nav>
+	<ul class="nav nav-tabs justify-content-center " id="myTab" role="tablist">
+	  <li class="nav-item">
+	    <a class="nav-link active" id="lagos" data-toggle="tab" href="#lasg" role="tab" aria-controls="home" aria-selected="true">Lagos</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Ogun</a>
+	  </li>
+	  
+	</ul>
+	<div class="tab-content text-center" id="myTabContent">
+	  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="lagos">
+	  	<fieldset class="">
+			<input type="text" class="form-control" id="search" placeholder="search by name or area in Lagos">
+			<div id="content">
+			<div class="card text-center"><h5 class="">filtered[key].name + <a href="tel:2187" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>
+			</div>
 
+
+		</fieldset>
+	  </div>
+	  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+	</div>
 </body>
+<!-- <script>
+
+	let filtered;
+	let cont = document.querySelector('#content')
+	const search = document.querySelector('#search')
+
+	fetch('https://abdullahiabdulkabir.github.io/LASG-NPF/js/numbers.json')
+		.then((response) => {
+			return response.json();
+			// console.log(response)
+		})
+		.then((data) => {
+			let res = search.value
+			for (var key in data) {
+				let badge = document.createElement('div');
+				// console.log(data[key].name)
+
+				badge.innerHTML = '<div class="card text-center"><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+				cont.appendChild(badge)
+
+			}
+			search.addEventListener('input', function () {
+				let ee = search.value.toUpperCase()
+				filtered = data.filter(el => el.name.includes(ee));
+				// console.log(filtered)    	
+				if (search) { cont.innerHTML = '' }
+				for (var key in filtered) {
+					let b = document.createElement('div');
+					b.innerHTML = '<div class="card text-center"><h5 class="">' + filtered[key].name + '<a href="tel:' + filtered[key].number + '" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
+					cont.appendChild(b)
+					// console.log(filtered);
+				}
+
+			})
+
+		});
+</script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
