@@ -15,7 +15,7 @@
 
 	<div class="container  ">
 		<div style="display: flex;">
-		<img src="../imgs/npf.png" width="150" alt="" id="npf">
+		<img src="../imgs/police.png" width="150" alt="" id="npf">
 		<h2 class="text-center" style="color: red;">Ogun State Police Command Emergency Numbers </h2>
 		</div>
 		<!-- <div class="theme-switch-wrapper justify-content-end">
@@ -27,6 +27,7 @@
 		</div> -->
 		<fieldset class="" >
 		<input type="text" class="form-control" id="search" placeholder="search by name or area in Ogun">
+			
 			<div id="content">
 				
 			</div>
@@ -53,10 +54,13 @@
  	 	// let res = search.value
  	 	data.forEach((el,i)=>{
  	 		let head = Object.keys(el)
- 	 		console.log(el[head])
-		  		console.log(head)
+ 	 		let h = document.createElement('h3')
+		  		 h.textContent =head
  	 		el[head].forEach(e=>{
+ 	 		console.log(h)
+
 		 		let badge = document.createElement('div');
+		 		// console.log(badge.append(h);
 			badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 		  		cont.appendChild(badge)   
  	 		})
