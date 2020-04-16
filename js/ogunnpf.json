@@ -1,72 +1,82 @@
 [
 
-{"name": "O/C SARS", "number":" 07065386591"},
+{"TACTICAL HEADS IN OGUN":
+	[
+	{"name": "O/C SARS", "number":" 07065386591"},
 
-{"name": "0/CX SQAUD", "number":"08081774908"},
+	{"name": "0/CX SQAUD", "number":"08081774908"},
 
-{"name": "O/C S.I.B.", "number":"08033173756"},
-{"name": "O/CE.O.D.", "number":" 08033447726"},
+	{"name": "O/C S.I.B.", "number":"08033173756"},
+	{"name": "O/CE.O.D.", "number":" 08033447726"},
+	{"name": "O/C ANTI-KIDNAPPING ", "number":"08060374010"},
 
-{"name": "O/C ANTI-KIDNAPPING ", "number":"08060374010"},
+	{"name": "O/C HIGHWAY ", "number":"08033208985"},
+	{"name": "COMMANDER IGP ", "number":"08035909911"},
+	{"name": "O/C Q.R.S ", "number":"07038649772"},
 
-{"name": "O/C HIGHWAY ", "number":"08033208985"},
-{"name": "COMMANDER IGP ", "number":"08035909911"},
-{"name": "O/C Q.R.S ", "number":"07038649772"},
+	{"name": "O/C MONITORING ", "number":"08035249181"},
 
-{"name": "O/C MONITORING ", "number":"08035249181"},
+	{"name": "O/C SAFER HIGHWAY ", "number":"07087253381"},
 
-{"name": "O/C SAFER HIGHWAY ", "number":"07087253381"},
+	{"name": "O/C IGP X SQUAD ", "number":"08023529332"},
+	{"name": "PPRO ", "number":"08034241238"},
+	]
+},
 
-{"name": "O/C IGP X SQUAD ", "number":"08023529332"},
-{"name": "PPRO ", "number":"08034241238"},
+{"OGBERE AREA COMMAND":
+	[
+	{"name": "ACP MAKINDE KAYODE O. ACPOL OGBERE 08020817176", "number":"08167704960"},
 
+	{"name": "CSP IGUNBOR OKOH DPO I-MISHIN ", "number":"08067140080"},
+	{"name": "CSP RAPHAELUGNEYO DPO IJEBU IFE ", "number":"08036000290"},
+	{"name": "SP ALAO ABDUL-AZEEZ DPO OGBERE ", "number":"08135694646"},
+	{"name": "SP TARKIHIR JOSEPH DPO ABIGI ", "number":"08035806505"},
+	{"name": "SP EBIETOMIYE ADELEKE O/C MARINE ", "number":"08127102317"}
+	]
+},
+{"OTTA AREA COMMAND":
+	[
+	{"name": "ACP AGBONIKAN MONDAY ACPOL OTTA ", "number":"07032165181"},
+	{"name": "CSP ADENIYI ADEKUNLE DPO IFO ", "number":"07069361321"},
+	{"name": "CSP IDEHAI GODWIN DPO SANGO OTA ", "number":"08081775431"},
+	{"name": "CSP BAMIDELE JOB DPO ONIPANU ", "number":"08034455679"},
+	{"name": "CSP UNUIGBE MONDAY DPO ITELE ", "number":"08038180582"},
+	{"name": "SP AKINSEYE ANDREW DPO AJUWON ", "number":"08065797203"},
+	{"name": "SP SIMIRE HILARY DPO O-ABIODUN ", "number":"08034696446"},
+	{"name": "SP OLUWAROTIMI JEJE DPO EWEKORO ", "number":"08034846261"},
+	{"name": "SP GBADAMOSI DENDE DPO IBOGUN  ", "number":"08062834289"},
+	{"name": "SP KURANGA YERO DPO AGBADO ", "number":"08068281748"}
+	]
+},
 
-{"name": "OGBERE AREA COMMAND", "number":""},
-{"name": "ACP MAKINDE KAYODE O. ACPOL OGBERE 08020817176", "number":"08167704960"},
+{"AGBARA AREA COMMAND":
+	[
 
-{"name": "CSP IGUNBOR OKOH DPO I-MISHIN ", "number":"08067140080"},
-{"name": "CSP RAPHAELUGNEYO DPO IJEBU IFE ", "number":"08036000290"},
-{"name": "SP ALAO ABDUL-AZEEZ DPO OGBERE ", "number":"08135694646"},
-{"name": "SP TARKIHIR JOSEPH DPO ABIGI ", "number":"08035806505"},
-{"name": "SP EBIETOMIYE ADELEKE O/C MARINE ", "number":"08127102317"},
-
-{"name": "OTTA AREA COMMAND", "number":""},
-
-{"name": "ACP AGBONIKAN MONDAY ACPOL OTTA ", "number":"07032165181"},
-{"name": "CSP ADENIYI ADEKUNLE DPO IFO ", "number":"07069361321"},
-{"name": "CSP IDEHAI GODWIN DPO SANGO OTA ", "number":"08081775431"},
-{"name": "CSP BAMIDELE JOB DPO ONIPANU ", "number":"08034455679"},
-{"name": "CSP UNUIGBE MONDAY DPO ITELE ", "number":"08038180582"},
-{"name": "SP AKINSEYE ANDREW DPO AJUWON ", "number":"08065797203"},
-{"name": "SP SIMIRE HILARY DPO O-ABIODUN ", "number":"08034696446"},
-{"name": "SP OLUWAROTIMI JEJE DPO EWEKORO ", "number":"08034846261"},
-{"name": "SP GBADAMOSI DENDE DPO IBOGUN  ", "number":"08062834289"},
-{"name": "SP KURANGA YERO DPO AGBADO ", "number":"08068281748"},
-
-{"name": "AGBARA AREA COMMAND", "number":""},
-
-{"name": "ACP BOLANLE MURITALA ACPOL AGBARA ", "number":"08038609898"},
-{"name": "CSP ABIODUN BAKARE DPO ADO/ODO ", "number":"08037279458"},
-{"name": "SP ADENIJI ABAYOMI DPO IGBESA  ", "number":"08033815039"},
- 
-{"name": "SP IBIYEMI ANNETTE DPO ATAN-OTA ", "number":"08028348248"},
-{"name": "SP SALEH DAHIRU DPO AGBARA ", "number":"08037467525"},
-
-{"name": "ILARO AREA COMMAND", "number":""},
-
-{"name": "ACP ADEYEMI CHRIS ACPOL ILARO ", "number":"07033744245"},
-{"name": "CSP OPEBIYI SUNDAY DPO IDIROKO ", "number":"08023347248"},
-{"name": "CSP Olayemi Jacob DPO ILARO ", "number":"07039063545"},
-{"name": "SP ADEBAYO HAKEEM DPO IPOKIA ", "number":"0806572566"},
-{"name": "SP OLABISI ELEBUTE DPO O-EGBADO ", "number":"0812637850"},
-
-{"name": "ACP AYETORO AREA COMMAND ", "number":""},
-{"name": "CSP ANTHONY ARUNA ACPOL AYETORO", "number":" 07038754944"},
-{"name": "CSP ODIDI SIMON DPO IMEKO ", "number":"08037152705"},
-{"name": "CSP NASIRUDEE OYEDELE DPO OJA-ODAN", "number":" 08035630218"},
-{"name": "CSP KOMOLAF OMONIYI DPO IGBOGILA", "number":" 08060603563"},
-{"name": "ADBUL FATAH OGUNSAYA DPO IMASAYI ", "number":"08136614365"},
-{"name": "OLAREWAJU KALEJAIYE DPO EGGUA ", "number":"07060805608"}
-
-
+	{"name": "ACP BOLANLE MURITALA ACPOL AGBARA ", "number":"08038609898"},
+	{"name": "CSP ABIODUN BAKARE DPO ADO/ODO ", "number":"08037279458"},
+	{"name": "SP ADENIJI ABAYOMI DPO IGBESA  ", "number":"08033815039"},
+	 
+	{"name": "SP IBIYEMI ANNETTE DPO ATAN-OTA ", "number":"08028348248"},
+	{"name": "SP SALEH DAHIRU DPO AGBARA ", "number":"08037467525"}
+	]
+},
+{"ILARO AREA COMMAND":
+	[
+	{"name": "ACP ADEYEMI CHRIS ACPOL ILARO ", "number":"07033744245"},
+	{"name": "CSP OPEBIYI SUNDAY DPO IDIROKO ", "number":"08023347248"},
+	{"name": "CSP Olayemi Jacob DPO ILARO ", "number":"07039063545"},
+	{"name": "SP ADEBAYO HAKEEM DPO IPOKIA ", "number":"0806572566"},
+	{"name": "SP OLABISI ELEBUTE DPO O-EGBADO ", "number":"0812637850"}
+	]
+}
+{"ACP AYETORO AREA COMMAND ":
+	[
+	{"name": "CSP ANTHONY ARUNA ACPOL AYETORO", "number":" 07038754944"},
+	{"name": "CSP ODIDI SIMON DPO IMEKO ", "number":"08037152705"},
+	{"name": "CSP NASIRUDEE OYEDELE DPO OJA-ODAN", "number":" 08035630218"},
+	{"name": "CSP KOMOLAF OMONIYI DPO IGBOGILA", "number":" 08060603563"},
+	{"name": "ADBUL FATAH OGUNSAYA DPO IMASAYI ", "number":"08136614365"},
+	{"name": "OLAREWAJU KALEJAIYE DPO EGGUA ", "number":"07060805608"}
+	]
+},
 ]
