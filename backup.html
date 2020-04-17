@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/backup.css">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<nav class="navr2">
@@ -51,7 +51,7 @@
 	let cont = document.querySelector('#content')
 	const search = document.querySelector('#search')
 
-	fetch('https://abdullahiabdulkabir.github.io/LASG-NPF/js/test.json')
+	fetch('http://emajency.com/js/test.json')
 		.then((response) => {
 			return response.json();
 			// console.log(response)
@@ -59,17 +59,23 @@
 		.then((data) => {
 			let res = search.value
 			for (var key in data) {
+				let h = document.createElement('h3')
+				h.textContent = key
+				cont.append(h)
+					// console.log(key)
+				data[key].forEach(ell=>{
 				let badge = document.createElement('div');
-				console.log(data)
 
-				badge.innerHTML = '<div class="card text-center"><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+				badge.innerHTML = '<div class="card text-center"><h5 class="">'+ell.name+'<a href="tel:'+ell.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 				cont.appendChild(badge)
+				})
+
 
 			}
 			search.addEventListener('input', function () {
 				let ee = search.value.toUpperCase()
 				filtered = data.filter(el => el.name.includes(ee));
-				// console.log(filtered)    	
+				console.log(filtered)    	
 				if (search) { cont.innerHTML = '' }
 				for (var key in filtered) {
 					let b = document.createElement('div');

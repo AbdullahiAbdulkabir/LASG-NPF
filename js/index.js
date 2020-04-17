@@ -1,23 +1,49 @@
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
+'use strict';
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+let deferredInstallPrompt = null;
+const installButton = document.getElementById('butInstall');
+installButton.addEventListener('click', installPWA);
 
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
+// CODELAB: Add event listener for beforeinstallprompt event
+window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
+
+/**
+ * Event handler for beforeinstallprompt event.
+ *   Saves the event & shows install button.
+ *
+ * @param {Event} evt
+ */
+function saveBeforeInstallPromptEvent(evt) {
+  // CODELAB: Add code to save event & show the install button.
+deferredInstallPrompt = evt;
+installButton.removeAttribute('hidden');
 }
 
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
+
+/**
+ * Event handler for butInstall - Does the PWA installation.
+ *
+ * @param {Event} evt
+ */
+function installPWA(evt) {
+  // CODELAB: Add code show install prompt & hide the install button.
+  deferredInstallPrompt.prompt();
+  evt.srcElement.setAttribute('hidden', true);
+  // CODELAB: Log user response to prompt.
+  deferredInstallPrompt.userChoice
+    .then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt', choice);
+      } else {
+        console.log('User dismissed the A2HS prompt', choice);
+      }
+      deferredInstallPrompt = null;
+    });
 }
 
-// toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+function logAppInstalled(evt) {
+  // CODELAB: Add code to log the event
+  console.log('Emajency App was installed.', evt);
+}
