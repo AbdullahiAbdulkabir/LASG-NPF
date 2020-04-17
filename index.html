@@ -56,7 +56,7 @@
 	let cont = document.querySelector('#content')
 	const search = document.querySelector('#search')
 
-	fetch('http://emajency.com/js/numbers.json')
+	fetch('https://emajency.com/js/numbers.json')
 		.then((response) => {
 			return response.json();
 			// console.log(response)
@@ -87,14 +87,14 @@
 
 		});
 
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load',()=>{
-		navigator.serviceWorker.register('sw.js')
-		.then((reg)=>{
-			console.log('serviceWorker installed',reg)
-		})
-	})
-}
+// if ('serviceWorker' in navigator) {
+// 	window.addEventListener('load',()=>{
+// 		navigator.serviceWorker.register('sw.js')
+// 		.then((reg)=>{
+// 			console.log('serviceWorker installed',reg)
+// 		})
+// 	})
+// }
 </script>
 
 </html>
