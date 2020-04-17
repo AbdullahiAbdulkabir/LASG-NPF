@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="icon" href="imgs/npf.png" >
+	<link rel="icon" href="imgs/npf.jpeg" >
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
 		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -56,7 +56,7 @@
 	let cont = document.querySelector('#content')
 	const search = document.querySelector('#search')
 
-	fetch('http://emajency.com/js/numbers.json')
+	fetch('https://emajency.com/js/numbers.json')
 		.then((response) => {
 			return response.json();
 			// console.log(response)
@@ -89,7 +89,7 @@
 
  if ('serviceWorker' in navigator) {
 	window.addEventListener('load',()=>{
-		navigator.serviceWorker.register('/sw.js')
+		navigator.serviceWorker.register('sw.js')
 		.then((reg)=>{
 			console.log('serviceWorker installed',reg)
 		})
