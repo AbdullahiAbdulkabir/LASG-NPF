@@ -71,7 +71,7 @@ a {
 
 }
 
-#content {
+#content ,.ogun #contentogun{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2px;
@@ -216,7 +216,7 @@ input:checked + .slider:before {
 
 /* Mobile reponsiveness */
 @media screen and (max-width: 768px) {
-  #content{
+  #content, .ogun #contentogun{
     display: grid;
     grid-template-columns: 1fr 1fr;
    
