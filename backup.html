@@ -12,16 +12,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="css/index.css"> -->
+	<link rel="stylesheet" href="css/backup.css">
 </head>
 <body>
-	<nav class="navr2">
-		<div class="justify-content-start">
-			<img src="imgs/o.PNG" width="200" alt="">
-			<p>Lagos State Police Command</p>
-		</div>
+	<div class="container">
 		
-		<h2 class="justify-content-end">Emergency Numbers</h2>
+	<nav class="navr2"  >
+		<div class="row">
+			<div class="col-6"><img src="imgs/o.PNG" width="150" alt="" >
+			<p >Lagos State Police Command</p></div>
+			<div class="col-4 text-center">
+				<h2 style="padding-top: 20%" >Emergency Numbers</h2>
+			</div>
+		</div>
+			
 	</nav>
+	</div>
+
 	<ul class="nav nav-tabs justify-content-center " id="myTab" role="tablist">
 	  <li class="nav-item">
 	    <a class="nav-link active" id="lagos" data-toggle="tab" href="#lasg" role="tab" aria-controls="home" aria-selected="true">Lagos</a>
@@ -30,20 +37,46 @@
 	    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Ogun</a>
 	  </li>
 	  
-	</ul>
-	<div class="tab-content text-center" id="myTabContent">
-	  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="lagos">
-	  	<fieldset class="">
-			<input type="text" class="form-control" id="search" placeholder="search by name or area in Lagos">
-			<div id="content">
-			<div class="card text-center"><h5 class="">filtered[key].name + <a href="tel:2187" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>
+	</ul><br/>
+	<div class="tab-content text-center container" id="myTabContent">
+		<div class="row justify-content-center">
+			
+		<div class="col-8">
+		  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="lagos">
+		  		<div class="inner-addon left-addon">
+			      	<i class="fa fa-search"></i>      
+					<input type="text" class="form-control form-rounded" id="search" placeholder="search by name or area in Lagos">
+			    </div>
+				
+				
+				<div id="content ">
+					<div class="row">
+						
+					<div class="card  col-6">
+						<div class="row">
+						<div class=" col-8"><p>COMMAND CONTROL ROOM</p> Control1</div>
+						<div class="col-2 card-body"><a href="tel:2331313" class="hvr-grow"><i class="fa fa-phone fa-2x call" aria-hidden="true"></i></a></div>
+						</div>
+					</div>
+
+					<div class="card  col-6">
+						<div class="row">
+						<div class=" col-8"><p>COMMAND CONTROL ROOM</p> Control1</div>
+						<div class="col-2 card-body"><a href="tel:2331313" class="hvr-grow"><i class="fa fa-phone fa-2x call" aria-hidden="true"></i></a></div>
+						</div>
+					</div>
+					</div>
+		
+		  		</div>
+		  		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					OGUN
+		
+		  		</div>
+		  		</div>
+
 			</div>
-
-
-		</fieldset>
-	  </div>
-	  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-	</div>
+		</div>
+		</div>
 </body>
 <script>
 
@@ -61,13 +94,13 @@
 			for (var key in data) {
 				let h = document.createElement('h3')
 				h.textContent = key
-				cont.append(h)
+				// cont.append(h)
 					// console.log(key)
 				data[key].forEach(ell=>{
 				let badge = document.createElement('div');
 
 				badge.innerHTML = '<div class="card text-center"><h5 class="">'+ell.name+'<a href="tel:'+ell.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
-				cont.appendChild(badge)
+				// cont.appendChild(badge)
 				})
 
 

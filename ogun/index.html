@@ -25,7 +25,11 @@
 		</div>
 
 		<fieldset class="" >
-		<input type="text" class="form-control" id="search" placeholder="search by name or area in Ogun">
+				<div class="inner-addon left-addon">
+			      	<i class="fa fa-search"></i>      
+					<input type="text" class="form-control form-rounded" id="search" placeholder="search by name or area in Ogun">
+				</div>
+		
 			
 			<div id="content">
 				
@@ -68,8 +72,10 @@
 	// }
 	search.addEventListener('input',function() {
 		let ee= search.value.toUpperCase()
-		filtered = data.filter(el => el.name.includes(ee));
-	    // console.log(filtered)    	
+		filtered = data.filter(el => 
+			el.name.includes(ee)
+	    // console.log(Object.keys(el).includes(el))    	
+			);
 			if(search){cont.innerHTML = ''}
 			for (var key in filtered) {	
  			let b = document.createElement('div');

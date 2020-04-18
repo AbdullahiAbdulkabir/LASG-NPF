@@ -10,3 +10,24 @@
 	border-style: solid;
 	border-color: #b10909;
 }
+.form-rounded{
+	border-radius: 1em;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .fa-search {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+/* align glyph */
+.left-addon .fa-search  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+

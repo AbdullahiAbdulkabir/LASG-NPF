@@ -13,6 +13,26 @@ body{
   color:rgb(158, 129, 129);	  
   transition: background-color .1s;
 }
+#search {
+  border-radius: 1em;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .fa-search {
+  position: absolute;
+  padding: 6px;
+  pointer-events: none;
+}
+/* align glyph */
+.left-addon .fa-search  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  44px; }
 
 .header{
   margin: 20px auto;
