@@ -19,7 +19,7 @@
 		
 	<nav class="navr2"  >
 		<div class="row">
-			<div class="col-6"><img src="imgs/o.PNG" width="150" alt="" >
+			<div class="col-6"><img src="imgs/police.png" width="150" alt="" >
 			<p >Lagos State Police Command</p></div>
 			<div class="col-4 text-center">
 				<h2 style="padding-top: 20%" >Emergency Numbers</h2>
@@ -50,41 +50,7 @@
 				    </div>
 					<div id="content ">
 						<div class="row content-lasg">
-						  <div class="col-sm-4">
-						    <div class="card ">
-						      <div class="card-body d-flex flex-row bd-highlight ">
-						        <div>
-						        	
-						        <h6 class="card-title">AREA COMMANDER 'A LION-BUILDING</h6>
-						        <p class="card-text"></p>
-						        </div>
-						        <a href="tel:2839709128" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col-sm-4">
-						    <div class="card ">
-						      <div class="card-body d-flex flex-row bd-highlight ">
-						        <div>	
-						        <h6 class="card-title">Special title treatment</h6>
-						        <p class="card-text"></p>
-						        </div>
-						        <a href="tel:2839709128" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col-sm-4">
-						    <div class="card ">
-						      <div class="card-body d-flex flex-row bd-highlight ">
-						        <div>
-						        	
-						        <h6 class="card-title">Special title treatment</h6>
-						        <p class="card-text"></p>
-						        </div>
-						        <a href="tel:2839709128" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a>
-						      </div>
-						    </div>
-						  </div>
+						  
 						</div>
 			  		</div>
 			  		
@@ -99,45 +65,11 @@
 			  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="lagos">
 			  		<div class="inner-addon left-addon">
 				      	<i class="fa fa-search"></i>      
-						<input type="text" class="form-control form-rounded" id="search" placeholder="search by name or area in Ogun">
+						<input type="text" class="form-control form-rounded" id="search-ogun" placeholder="search by name or area in Ogun">
 				    </div>
 					<div id="content">
 						<div class="row content-ogun">
-						  <div class="col-sm-4">
-						    <div class="card ">
-						      <div class="card-body d-flex flex-row bd-highlight ">
-						        <div>
-						        	
-						        <h6 class="card-title">OGUN</h6>
-						        <p class="card-text"></p>
-						        </div>
-						        <a href="tel:2839709128" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col-sm-4">
-						    <div class="card ">
-						      <div class="card-body d-flex flex-row bd-highlight ">
-						        <div>	
-						        <h6 class="card-title">Special title treatment</h6>
-						        <p class="card-text"></p>
-						        </div>
-						        <a href="tel:2839709128" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col-sm-4">
-						    <div class="card ">
-						      <div class="card-body d-flex flex-row bd-highlight ">
-						        <div>
-						        	
-						        <h6 class="card-title">Special title treatment</h6>
-						        <p class="card-text"></p>
-						        </div>
-						        <a href="tel:2839709128" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a>
-						      </div>
-						    </div>
-						  </div>
+						  
 						</div>
 			  		</div>
 			  		
@@ -183,6 +115,54 @@
 
 		});
 </script>
+<script>
+ 	
+ 	let filteredogun;
+ 	let contogun = document.querySelector('.content-ogun')
+ 	const searchogun = document.querySelector('#search-ogun')
+ 	
+ 	fetch('https://emajency.com/js/ogunnpf.json')
+	  .then((response) => {
+	    return response.json();
+	    // console.log(response)
+	  })
+ 	 .then((data) => {
+ 	 	// let res = search.value
+ 	 	data.forEach((el,i)=>{
+ 	 		let head = Object.keys(el)
+ 	 		let h = document.createElement('h3')
+		  		 h.textContent =head
+ 	 		el[head].forEach(e=>{
+ 	 		// console.log(h)
+
+		 		let badge = document.createElement('div');
+		 		// console.log(badge.append(h);
+		 		badge.classList.add('col-sm-4')
+					badge.innerHTML = '<div class="card "> <div class="card-body d-flex flex-row bd-highlight "><div><h6 class="card-title">'+e.name+'</h6><p class="card-text"></p></div><a href="tel:' + e.number + '" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a></div></div>'
+		  		contogun.appendChild(badge)   
+ 	 		})
+	  	
+ 	 	})
+	// }
+	searchogun.addEventListener('input', function () {
+				let ee = searchogun.value.toUpperCase()
+				filteredogun = data.filter(el => el.name.includes(ee));
+				// console.log(filtered)    	
+				if (searchogun) { contogun.innerHTML = '' }
+				for (var key in filteredogun) {
+					let b = document.createElement('div');
+					b.classList.add('col-sm-4')
+					b.innerHTML = '<div class="card "> <div class="card-body d-flex flex-row bd-highlight "><div><h6 class="card-title">'+filteredogun[key].name+'</h6><p class="card-text"></p></div><a href="tel:' + filteredogun[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a></div></div>'
+					contogun.appendChild(b)
+					// console.log(filtered);
+				}
+
+			})
+	
+
+  });
+
+ </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

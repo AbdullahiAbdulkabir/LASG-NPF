@@ -7,9 +7,11 @@
 	text-align: right;
 }
 #lagos{
-	border-style: solid;
-	/*border-color: #b10909;*/
+	/*border-style: solid;
+	border-color: #b10909;
+	/*border: none;*/*/
 }
+
 .form-rounded{
 	border-radius: 1em;
 }
@@ -21,6 +23,7 @@
 }
 .card .card-body{
 	padding: 10px;
+	background-color: #acacac;
 }
 
 /* enable absolute positioning */
@@ -39,5 +42,13 @@
 .left-addon .fa-search  { left:  0px;}
 
 /* add padding  */
-.left-addon input  { padding-left:  30px; }
+.left-addon input  {
+padding-left:  30px; 
+background-color: #acacac;
+}
 
+@media screen and (max-width: 768px) {
+.navr2 .row p {
+	    text-align: center;
+}
+}
