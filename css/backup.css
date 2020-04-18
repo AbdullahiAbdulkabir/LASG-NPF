@@ -25,7 +25,9 @@
 	padding: 10px;
 	background-color: #acacac;
 }
-
+.hvr-grow i{
+	color:black;
+}
 /* enable absolute positioning */
 .inner-addon {
   position: relative;
