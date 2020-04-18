@@ -54,3 +54,36 @@ background-color: #acacac;
 	    text-align: center;
 }
 }
+@media screen and (max-width:600px){
+	
+	div.row.content-lasg{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 3px;
+		width: 320px;
+	}
+	div.row.content-ogun{
+		display: flex;
+		flex-wrap: wrap;
+		width: 320px;
+		padding-left: 3px;
+	}
+	.justify-content-center{
+		justify-content: left !important;
+	}
+	.col-11{
+		padding-left: 3px;
+	}
+	.col-sm-4{
+		padding: 0;
+		padding-right: 10px;
+		width: 150px;
+		margin-bottom: 30px;
+	}
+	.card-title{
+		font-size: 12px;
+	}
+	.fa-phone{
+		font-size: 15px;
+	}
+}
