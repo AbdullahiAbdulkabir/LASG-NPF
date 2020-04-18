@@ -72,7 +72,7 @@
 	// }
 	search.addEventListener('input',function() {
 		let ee= search.value.toUpperCase()
-		filtered = data.filter(el => 
+		filtered = data.filter((el,ep) => 
 			el.name.includes(ee)
 	    // console.log(Object.keys(el).includes(el))    	
 			);

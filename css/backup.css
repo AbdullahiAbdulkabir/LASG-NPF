@@ -14,9 +14,19 @@
 	border-radius: 1em;
 }
 
+.card{
+	margin-bottom: 10px;
+	 height: 70px;
+
+}
+.card .card-body{
+	padding: 10px;
+}
+
 /* enable absolute positioning */
 .inner-addon {
   position: relative;
+	margin-bottom: 2em;
 }
 
 /* style glyph */
