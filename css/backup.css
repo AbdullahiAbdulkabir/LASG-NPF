@@ -69,10 +69,10 @@ background-color: #acacac;
 		padding-left: 3px;
 	}
 	.justify-content-center{
-		justify-content: left !important;
+/* 		justify-content: left !important; */
 	}
 	.col-11{
-		padding-left: 3px;
+		padding-left: 34px;
 	}
 	.col-sm-4{
 		padding: 0;
