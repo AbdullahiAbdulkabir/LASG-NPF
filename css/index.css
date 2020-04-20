@@ -212,7 +212,6 @@ input:checked + .slider:before {
     font-size: 1.4em;
   } */
 }
-
 /* Mobile reponsiveness */
 @media screen and (max-width: 768px) {
   #content, .ogun #contentogun{
