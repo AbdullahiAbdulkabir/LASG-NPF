@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>NPF Emergency Numbers</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539957-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-111539957-2');
+	</script>
+
+	<title>Lagos | Ogun NPF Emergency Numbers</title>
 	<meta name=”Emergency Numbers” >
 	<meta name="keywords" content="lagosunrest, ogununrest, lasg, npf, lasgnpf, ogunnpf, emergency, numbers" />
 	<meta name="description" content="Contains lists of Lagos and Ogun state police emergency numbers"/>
@@ -14,79 +25,94 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<!-- <link rel="stylesheet" href="css/index.css"> -->
-	<link rel="stylesheet" href="css/backup.css">
+	<link rel="stylesheet" href="css/index.css">
+
 </head>
+
 <body>
+
 	<div class="container">
-		
-	<nav class="navr2"  >
-		<div class="row">
-			<div class="col-6"><img src="imgs/police.png" width="150" alt="" >
-			<p >Lagos|Ogun State Police Command</p></div>
-			<div class="col-4 text-center">
-				<h2 style="padding-top: 20%" >Emergency Numbers</h2>
-			</div>
-		</div>
-			
-	</nav>
-	</div>
-
-	<ul class="nav nav-tabs justify-content-center " id="myTab" role="tablist">
-	  <li class="nav-item">
-	    <a class="nav-link active" id="lagos" data-toggle="tab" href="#lasg" role="tab" aria-controls="home" aria-selected="true">Lagos</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Ogun" role="tab" aria-controls="profile" aria-selected="false">Ogun</a>
-	  </li>
+		<ul class="nav nav-tabs justify-content-center " id="myTab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="lagos" data-toggle="tab" href="#lasg" role="tab" aria-controls="home" aria-selected="true">Lagos</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Ogun" role="tab" aria-controls="profile" aria-selected="false">Ogun</a>
+		  </li>
 	  
-	</ul><br/>
-
+		</ul><br/>
 	<div class="tab-content  text-center container" id="myTabContent">
 	  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="home-tab">
-	  	<div class="row justify-content-center">
-			<div class="col-11">
-			  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="lagos">
-			  		<div class="inner-addon left-addon">
-				      	<i class="fa fa-search"></i>      
-						<input type="text" class="form-control form-rounded" id="search-lasg" placeholder="search by name or area in Lagos">
-				    </div>
-					<div id="content ">
-						<div class="row content-lasg">
-						  
-						</div>
-			  		</div>
-			  		
-			  	</div>
-			</div>	
+		<div class="header">
+			<div>
+				<img src="imgs/police.png" class="logo" alt="Nigeria police" id="npf">
+			</div>
+			<div class="header-text-wrapper">
+				<h2 class="header-text">Lagos State Police Command Emergency Numbers </h2>
+			</div>
+
+			<!-- <div class="theme-switch-wrapper justify-content-end">
+				<label class="theme-switch" for="checkbox">
+					<input type="checkbox" id="checkbox" />
+					<div class="slider round"></div>
+				</label>
+				<p>Enable Dark Mode!</p>
+			</div> -->
 		</div>
-	  </div><!--END tab-PANE LAGOS-->
+		<fieldset class="">
+			<div class="inner-addon left-addon">
+			      	<i class="fa fa-search"></i>      
+					<input type="text" class="form-control form-rounded" id="search" placeholder="search by name or area in Lagos">
+			</div>
+			
+			<div id="content">
+
+			</div>
+
+
+		</fieldset>
+	</div>
+	<!-- OGUN  -->
 	  <div class="tab-pane fade" id="Ogun" role="tabpanel" aria-labelledby="profile-tab">
-	  		
-	  		<div class="row justify-content-center">
-			<div class="col-11">
-			  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="lagos">
-			  		<div class="inner-addon left-addon">
-				      	<i class="fa fa-search"></i>      
-						<input type="text" class="form-control form-rounded" id="search-ogun" placeholder="search by name or area in Ogun">
-				    </div>
-					<div id="content">
-						<div class="row content-ogun">
-						  
-						</div>
-			  		</div>
-			  		
-			  	</div>
-			</div>	
+	  <div class="header">
+			<div>
+				<img src="imgs/police.png" class="logo" alt="Nigeria police" id="npf">
+			</div>
+			<div class="header-text-wrapper">
+				<h2 class="header-text">Ogun State Police Command Emergency Numbers</h2>
+			</div>
+
 		</div>
-	  </div> <!--END tab-pane OGUN-->
-	</div> <!--END tab-content-->
+
+		<fieldset class="ogun">
+				<div class="inner-addon left-addon">
+			      	<i class="fa fa-search"></i>      
+					<input type="text" class="form-control form-rounded" id="searchogun" placeholder="search by name or area in Ogun">
+				</div>
+		
+			
+			<div id="contentogun" >
+				
+			</div>
+			
+			
+		</fieldset>
+	  </div>
+
+</div>
+
+	</div>
 </body>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
-	//LAGOS STATE API CALL
+
 	let filtered;
-	let cont = document.querySelector('.content-lasg')
-	const search = document.querySelector('#search-lasg')
+	let cont = document.querySelector('#content')
+	const search = document.querySelector('#search')
+
 	fetch('https://emajency.com/js/numbers.json')
 		.then((response) => {
 			return response.json();
@@ -96,8 +122,9 @@
 			let res = search.value
 			for (var key in data) {
 				let badge = document.createElement('div');
-					badge.classList.add('col-sm-4')
-					badge.innerHTML = '<div class="card "> <div class="card-body d-flex flex-row bd-highlight "><div><h6 class="card-title">'+data[key].name+'</h6><p class="card-text"></p></div><a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a></div></div>'
+				// console.log(data[key].name)
+
+				badge.innerHTML = '<div class="card text-center"><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 				cont.appendChild(badge)
 
 			}
@@ -108,8 +135,7 @@
 				if (search) { cont.innerHTML = '' }
 				for (var key in filtered) {
 					let b = document.createElement('div');
-					b.classList.add('col-sm-4')
-					b.innerHTML = '<div class="card "> <div class="card-body d-flex flex-row bd-highlight "><div><h6 class="card-title">'+filtered[key].name+'</h6><p class="card-text"></p></div><a href="tel:' + filtered[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a></div></div>'
+					b.innerHTML = '<div class="card text-center"><h5 class="">' + filtered[key].name + '<a href="tel:' + filtered[key].number + '" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
 					cont.appendChild(b)
 					// console.log(filtered);
 				}
@@ -117,13 +143,14 @@
 			})
 
 		});
-</script>
-<script >
 
- 	//OGUN STATE API CALL
- 	let filteredogun;
- 	let contogun = document.querySelector('.content-ogun')
- 	const searchogun = document.querySelector('#search-ogun')
+ 
+</script>
+<script>
+ 	//OGUN
+ 	let filterogun;
+ 	let contogun = document.querySelector('#contentogun')
+ 	const searchogun = document.querySelector('#searchogun')
  	
  	fetch('https://emajency.com/js/ogunnpf.json')
 	  .then((response) => {
@@ -141,33 +168,29 @@
 
 		 		let badge = document.createElement('div');
 		 		// console.log(badge.append(h);
-		 		badge.classList.add('col-sm-4')
-					badge.innerHTML = '<div class="card "> <div class="card-body d-flex flex-row bd-highlight "><div><h6 class="card-title">'+e.name+'</h6><p class="card-text"></p></div><a href="tel:' + e.number + '" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a></div></div>'
+			badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 		  		contogun.appendChild(badge)   
  	 		})
 	  	
  	 	})
 	// }
-	searchogun.addEventListener('input', function () {
-				let ee = searchogun.value.toUpperCase()
-				filteredogun = data.filter(el => el.name.includes(ee));
-				// console.log(filtered)    	
-				if (searchogun) { contogun.innerHTML = '' }
-				for (var key in filteredogun) {
-					let b = document.createElement('div');
-					b.classList.add('col-sm-4')
-					b.innerHTML = '<div class="card "> <div class="card-body d-flex flex-row bd-highlight "><div><h6 class="card-title">'+filteredogun[key].name+'</h6><p class="card-text"></p></div><a href="tel:' + filteredogun[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-2x " aria-hidden="true"></i></a></div></div>'
-					contogun.appendChild(b)
-					// console.log(filtered);
-				}
+	searchogun.addEventListener('input',function() {
+		let ee= searchogun.value.toUpperCase()
+		filterogun = data.filter((el,ep) => 
+			el.name.includes(ee)
+	    // console.log(Object.keys(el).includes(el))    	
+			);
+			if(searchogun){contogun.innerHTML = ''}
+			for (var key in filterogun) {	
+ 			let b = document.createElement('div');
+			b.innerHTML = '<div class="card text-center"><h5 class="">'+filterogun[key].name+'<a href="tel:'+filterogun[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
+  			contogun.appendChild(b) 
+			// console.log(filtered);
+  			}
 
-			})
-	
+	})
 
   });
 
  </script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
