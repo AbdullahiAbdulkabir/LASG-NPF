@@ -213,7 +213,6 @@ input:checked + .slider:before {
   } */
 }
 
-
 /* Mobile reponsiveness */
 @media screen and (max-width: 768px) {
   #content, .ogun #contentogun{
