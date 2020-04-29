@@ -129,9 +129,9 @@
 
 			}
 			search.addEventListener('input', function () {
-				let ee = search.value.toUpperCase()
+				let ee = search.value[0].toUpperCase()+ search.value.substr(1)
 				filtered = data.filter(el => el.name.includes(ee));
-				// console.log(filtered)    	
+				// console.log(ee)    	
 				if (search) { cont.innerHTML = '' }
 				for (var key in filtered) {
 					let b = document.createElement('div');
