@@ -48,7 +48,7 @@
 				<img src="../imgs/images.jpg" style="border-radius: 6px;" class="logo" alt="Lagos Flag" id="npf">
 			</div>
 			<div class="header-text-wrapper">
-				<h2 class="header-text">Lagos COVID-19 Testing Sites </h2>
+				<h2 class="header-text">LAGOS COVID-19 TESTING SITES & NUMBERS </h2>
 			</div>
 		</div>
 		<fieldset class="">
@@ -71,7 +71,7 @@
 				<!-- <img src="imgs/police.png" class="logo" alt="Nigeria police" id="npf"> -->
 			</div>
 			<div class="header-text-wrapper">
-				<!-- <h2 class="header-text">states State Police Command Emergency Numbers</h2> -->
+				<h2 class="header-text">COVID-19 STATE EMERGENCY NUMBERS</h2>
 			</div>
 
 		</div>
@@ -83,9 +83,9 @@
 				</div>
 		
 			
-			<span id="contentogun" >
+			<div id="contentstate" >
 				
-			</span>
+			</div>
 			
 			
 		</fieldset>
@@ -141,7 +141,7 @@
 <script>
  	//states
  	let filterstates;
- 	let contstates = document.querySelector('#contentogun')
+ 	let contstates = document.querySelector('#contentstate')
  	const statesearch = document.querySelector('#statesearch')
  	
  	fetch('https://emajency.com/js/covid19.json')
@@ -154,7 +154,7 @@
  	 		for (var key in data) {
 				let b = document.createElement('div');
 				
-				b.innerHTML = '<div class=" cardcovid text-center" ><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+				b.innerHTML = '<div class=" statecovid text-center" ><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 				contstates.appendChild(b)
 
 			}

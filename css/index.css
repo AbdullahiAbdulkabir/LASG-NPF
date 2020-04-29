@@ -71,11 +71,23 @@ a {
 
 }
 
-#content ,.ogun #contentogun{
+#content,.states #contentstate {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2px;
  margin-top: 40px;
+}
+
+.statecovid{
+  border-radius: 8px;
+    background: #fff;
+    max-width: 330px;
+    margin: 10px auto;
+    box-shadow: 0 2px 3px rgba(71, 71, 71, 0.3);
+  background: whitesmoke; 
+  width: 80%;
+   padding: 28px 20px;
+  height: 160px;
 }
 
 .contact-info {
@@ -101,10 +113,8 @@ a {
     box-shadow: 0 2px 3px rgba(71, 71, 71, 0.3);
   background: whitesmoke; 
   width: 80%;
-
    padding: 28px 20px;
   height: 250px;
-
 }
 .fa-phone{
   color: rgb(206, 169, 169);
@@ -217,17 +227,11 @@ input:checked + .slider:before {
 
 
 @media screen and (max-width: 800px) {
-  #npf{
-    /*height: 90px;*/
-
-  }
-  /* h2{
-    font-size: 1.4em;
-  } */
+  
 }
 /* Mobile reponsiveness */
 @media screen and (max-width: 768px) {
-  #content, .ogun #contentogun{
+  #content, .states #contentstate{
     display: grid;
     grid-template-columns: 1fr 1fr;
    
@@ -246,29 +250,4 @@ input:checked + .slider:before {
     color: rgb(221, 218, 218);
   }
   
-
-/* 
-  .slider:before {
-    height: 18px;
-    left: 2px;
-    width: 20px;
-    bottom: 7px;
-  }
-  
-
-  .theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 50px;
-  }
-
-  .theme-switch-wrapper{
-    display: block;
-    margin-top: 0px;
-  }
-
-  .theme-switch-wrapper p{
-    font-size: 10px;
-  } */
 }
