@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539957-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-111539957-2');
+	</script>
+
+	<title>Lagos COVID-19 Testing Sites</title>
+	<meta name=”Emergency Numbers” >
+	<meta name="keywords" content="lagosunrest, ogununrest, lasg, npf, lasgnpf, ogunnpf, emergency, numbers" />
+	<meta name="description" content="Contains lists of Lagos and Ogun state police emergency numbers"/>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="icon" href="imgs/npf.jpeg" >
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<ul class="nav nav-tabs justify-content-center " id="myTab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="lagos" data-toggle="tab" href="#lasg" role="tab" aria-controls="home" aria-selected="true">Lagos</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Ogun" role="tab" aria-controls="profile" aria-selected="false">All states</a>
+		  </li>
+	  
+		</ul><br/>
+	<div class="tab-content  text-center container" id="myTabContent">
+	  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="home-tab">
+		<div class="header">
+			<div>
+				<img src="imgs/police.png" class="logo" alt="Nigeria police" id="npf">
+			</div>
+			<div class="header-text-wrapper">
+				<h2 class="header-text">Lagos COVID-19 Testing Sites </h2>
+			</div>
+
+			<!-- <div class="theme-switch-wrapper justify-content-end">
+				<label class="theme-switch" for="checkbox">
+					<input type="checkbox" id="checkbox" />
+					<div class="slider round"></div>
+				</label>
+				<p>Enable Dark Mode!</p>
+			</div> -->
+		</div>
+		<fieldset class="">
+			<div class="inner-addon left-addon">
+			      	<i class="fa fa-search"></i>      
+					<input type="text" class="form-control form-rounded" id="search" placeholder="search by name or area in Lagos">
+			</div>
+			
+			<div id="content">
+
+			</div>
+
+
+		</fieldset>
+	</div>
+	<!-- OGUN  -->
+	  <div class="tab-pane fade" id="Ogun" role="tabpanel" aria-labelledby="profile-tab">
+	  <div class="header">
+			<div>
+				<img src="imgs/police.png" class="logo" alt="Nigeria police" id="npf">
+			</div>
+			<div class="header-text-wrapper">
+				<!-- <h2 class="header-text">Ogun State Police Command Emergency Numbers</h2> -->
+			</div>
+
+		</div>
+
+		<fieldset class="ogun">
+				<div class="inner-addon left-addon">
+			      	<i class="fa fa-search"></i>      
+					<input type="text" class="form-control form-rounded" id="searchogun" placeholder="search by name or area in Ogun">
+				</div>
+		
+			
+			<div id="contentogun" >
+				
+			</div>
+			
+			
+		</fieldset>
+	  </div>
+
+</div>
+
+	</div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+	let filtered;
+	let cont = document.querySelector('#content')
+	const search = document.querySelector('#search')
+
+	fetch('https://emajency.com/js/numbers.json')
+		.then((response) => {
+			return response.json();
+			// console.log(response)
+		})
+		.then((data) => {
+			let res = search.value
+			for (var key in data) {
+				let badge = document.createElement('div');
+				// console.log(data[key].name)
+
+				badge.innerHTML = '<div class="card text-center"><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+				cont.appendChild(badge)
+
+			}
+			search.addEventListener('input', function () {
+				let ee = search.value.toUpperCase()
+				filtered = data.filter(el => el.name.includes(ee));
+				// console.log(filtered)    	
+				if (search) { cont.innerHTML = '' }
+				for (var key in filtered) {
+					let b = document.createElement('div');
+					b.innerHTML = '<div class="card text-center"><h5 class="">' + filtered[key].name + '<a href="tel:' + filtered[key].number + '" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
+					cont.appendChild(b)
+					// console.log(filtered);
+				}
+
+			})
+
+		});
+
+ 
+</script>
+<script>
+ 	//OGUN
+ 	let filterogun;
+ 	let contogun = document.querySelector('#contentogun')
+ 	const searchogun = document.querySelector('#searchogun')
+ 	
+ 	fetch('https://emajency.com/js/ogunnpf.json')
+	  .then((response) => {
+	    return response.json();
+	    // console.log(response)
+	  })
+ 	 .then((data) => {
+ 	 	// let res = search.value
+ 	 	data.forEach((el,i)=>{
+ 	 		let head = Object.keys(el)
+ 	 		let h = document.createElement('h3')
+		  		 h.textContent =head
+ 	 		el[head].forEach(e=>{
+ 	 		// console.log(h)
+
+		 		let badge = document.createElement('div');
+		 		// console.log(badge.append(h);
+			badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+		  		contogun.appendChild(badge)   
+ 	 		})
+	  	
+ 	 	})
+	// }
+	searchogun.addEventListener('input',function() {
+		let ee= searchogun.value.toUpperCase()
+		filterogun = data.filter((el,ep) => 
+			el.name.includes(ee)
+	    // console.log(Object.keys(el).includes(el))    	
+			);
+			if(searchogun){contogun.innerHTML = ''}
+			for (var key in filterogun) {	
+ 			let b = document.createElement('div');
+			b.innerHTML = '<div class="card text-center"><h5 class="">'+filterogun[key].name+'<a href="tel:'+filterogun[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
+  			contogun.appendChild(b) 
+			// console.log(filtered);
+  			}
+
+	})
+
+  });
+
+ </script>
+</html>
