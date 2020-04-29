@@ -92,7 +92,6 @@
 		
 			
 			<div id="contentogun" >
-				<h1 class="color:white;">COMING SOON................</h1>
 				
 			</div>
 			
@@ -123,8 +122,7 @@
 			let res = search.value
 			for (var key in data) {
 				let badge = document.createElement('div');
-				// console.log(data[key].name)
-
+			
 				badge.innerHTML = '<div class=" cardcovid text-center" ><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
 				cont.appendChild(badge)
 
@@ -150,49 +148,40 @@
 
 <script>
  	//states
- // 	let filterogun;
- // 	let contogun = document.querySelector('#contentogun')
- // 	const statesearch = document.querySelector('#statesearch')
+ 	let filterstates;
+ 	let contstates = document.querySelector('#contentogun')
+ 	const statesearch = document.querySelector('#statesearch')
  	
- // 	fetch('https://emajency.com/js/ogunpf.json')
-	//   .then((response) => {
-	//     return response.json();
-	//     // console.log(response)
-	//   })
- // 	 .then((data) => {
- // 	 	// let res = search.value
- // 	 	data.forEach((el,i)=>{
- // 	 		let head = Object.keys(el)
- // 	 		let h = document.createElement('h3')
-	// 	  		 h.textContent =head
- // 	 		el[head].forEach(e=>{
- // 	 		// console.log(h)
+ 	fetch('https://emajency.com/js/covid19.json')
+	  .then((response) => {
+	    return response.json();
+	    // console.log(response)
+	  })
+ 	 .then((data) => {
+ 	 	// let res = search.value
+ 	 		for (var key in data) {
+				let b = document.createElement('div');
+				
+				b.innerHTML = '<div class=" cardcovid text-center" ><h5 class="">' + data[key].name + '<a href="tel:' + data[key].number + '" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+				contstates.appendChild(b)
 
-	// 	 		let badge = document.createElement('div');
-	// 	 		// console.log(badge.append(h);
-	// 		badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
-	// 	  		contogun.appendChild(badge)   
- // 	 		})
-	  	
- // 	 	})
-	// // }
-	// statesearch.addEventListener('input',function() {
-	// 	let ee= statesearch.value.toUpperCase()
-	// 	filterogun = data.filter((el,ep) => 
-	// 		el.name.includes(ee)
-	//     // console.log(Object.keys(el).includes(el))    	
-	// 		);
-	// 		if(statesearch){contogun.innerHTML = ''}
-	// 		for (var key in filterogun) {	
- // 			let b = document.createElement('div');
-	// 		b.innerHTML = '<div class="card text-center"><h5 class="">'+filterogun[key].name+'<a href="tel:'+filterogun[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
- //  			contogun.appendChild(b) 
-	// 		// console.log(filtered);
- //  			}
+			}
+	statesearch.addEventListener('input',function() {
+		let ee = statesearch.value[0].toUpperCase()+ statesearch.value.substr(1)
+			filterstates = data.filter((el,ep) => 
+				el.name.includes(ee) 	
+			);
+			if(statesearch){contstates.innerHTML = ''}
+			for (var key in filterstates) {	
+ 			let b = document.createElement('div');
+			b.innerHTML = '<div class="card text-center"><h5 class="">'+filterstates[key].name+'<a href="tel:'+filterstates[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
+  			contstates.appendChild(b) 
+			// console.log(filtered);
+  			}
 
-	// })
+	})
 
- //  });
+  });
 
  </script>
 </html>
