@@ -13,7 +13,7 @@ body{
   color:rgb(158, 129, 129);	  
   transition: background-color .1s;
 }
-#search {
+#search, #statesearch {
   border-radius: 1em;
 }
 
