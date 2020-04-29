@@ -93,6 +93,19 @@ a {
   width: 80%;
   height: 200px;
 }
+.cardcovid{
+  border-radius: 8px;
+    background: #fff;
+    max-width: 330px;
+    margin: 10px auto;
+    box-shadow: 0 2px 3px rgba(71, 71, 71, 0.3);
+  background: whitesmoke; 
+  width: 80%;
+
+   padding: 28px 20px;
+  height: 250px;
+
+}
 .fa-phone{
   color: rgb(206, 169, 169);
 }
