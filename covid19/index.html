@@ -25,7 +25,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="../css/index.css">
 
 </head>
 
@@ -45,7 +45,7 @@
 	  <div class="tab-pane fade show active" id="lasg" role="tabpanel" aria-labelledby="home-tab">
 		<div class="header">
 			<div>
-				<img src="imgs/police.png" class="logo" alt="Nigeria police" id="npf">
+				<img src="imgs/polie.png" class="logo" alt="Lagos Flag" id="npf">
 			</div>
 			<div class="header-text-wrapper">
 				<h2 class="header-text">Lagos COVID-19 Testing Sites </h2>
@@ -113,7 +113,7 @@
 	let cont = document.querySelector('#content')
 	const search = document.querySelector('#search')
 
-	fetch('https://emajency.com/js/numbers.json')
+	fetch('https://emajency.com/js/lasgcovid.json')
 		.then((response) => {
 			return response.json();
 			// console.log(response)
@@ -152,7 +152,7 @@
  	let contogun = document.querySelector('#contentogun')
  	const searchogun = document.querySelector('#searchogun')
  	
- 	fetch('https://emajency.com/js/ogunnpf.json')
+ 	fetch('https://emajency.com/js/ogunpf.json')
 	  .then((response) => {
 	    return response.json();
 	    // console.log(response)
