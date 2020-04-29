@@ -148,49 +148,49 @@
 </script>
 <script>
  	//OGUN
- 	let filterogun;
- 	let contogun = document.querySelector('#contentogun')
- 	const searchogun = document.querySelector('#searchogun')
+ // 	let filterogun;
+ // 	let contogun = document.querySelector('#contentogun')
+ // 	const searchogun = document.querySelector('#searchogun')
  	
- 	fetch('https://emajency.com/js/ogunpf.json')
-	  .then((response) => {
-	    return response.json();
-	    // console.log(response)
-	  })
- 	 .then((data) => {
- 	 	// let res = search.value
- 	 	data.forEach((el,i)=>{
- 	 		let head = Object.keys(el)
- 	 		let h = document.createElement('h3')
-		  		 h.textContent =head
- 	 		el[head].forEach(e=>{
- 	 		// console.log(h)
+ // 	fetch('https://emajency.com/js/ogunpf.json')
+	//   .then((response) => {
+	//     return response.json();
+	//     // console.log(response)
+	//   })
+ // 	 .then((data) => {
+ // 	 	// let res = search.value
+ // 	 	data.forEach((el,i)=>{
+ // 	 		let head = Object.keys(el)
+ // 	 		let h = document.createElement('h3')
+	// 	  		 h.textContent =head
+ // 	 		el[head].forEach(e=>{
+ // 	 		// console.log(h)
 
-		 		let badge = document.createElement('div');
-		 		// console.log(badge.append(h);
-			badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
-		  		contogun.appendChild(badge)   
- 	 		})
+	// 	 		let badge = document.createElement('div');
+	// 	 		// console.log(badge.append(h);
+	// 		badge.innerHTML = '<div class="card text-center"><h5 class="">'+e.name+'<a href="tel:'+e.number+'" class="hvr-grow"><i class="fa fa-phone fa-4x call" aria-hidden="true"></i></a></div></h5><br>'
+	// 	  		contogun.appendChild(badge)   
+ // 	 		})
 	  	
- 	 	})
-	// }
-	searchogun.addEventListener('input',function() {
-		let ee= searchogun.value.toUpperCase()
-		filterogun = data.filter((el,ep) => 
-			el.name.includes(ee)
-	    // console.log(Object.keys(el).includes(el))    	
-			);
-			if(searchogun){contogun.innerHTML = ''}
-			for (var key in filterogun) {	
- 			let b = document.createElement('div');
-			b.innerHTML = '<div class="card text-center"><h5 class="">'+filterogun[key].name+'<a href="tel:'+filterogun[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
-  			contogun.appendChild(b) 
-			// console.log(filtered);
-  			}
+ // 	 	})
+	// // }
+	// searchogun.addEventListener('input',function() {
+	// 	let ee= searchogun.value.toUpperCase()
+	// 	filterogun = data.filter((el,ep) => 
+	// 		el.name.includes(ee)
+	//     // console.log(Object.keys(el).includes(el))    	
+	// 		);
+	// 		if(searchogun){contogun.innerHTML = ''}
+	// 		for (var key in filterogun) {	
+ // 			let b = document.createElement('div');
+	// 		b.innerHTML = '<div class="card text-center"><h5 class="">'+filterogun[key].name+'<a href="tel:'+filterogun[key].number+'" class="hvr-grow"><i class="fa fa-phone " aria-hidden="true"></i></a></div></h5><br>'
+ //  			contogun.appendChild(b) 
+	// 		// console.log(filtered);
+ //  			}
 
-	})
+	// })
 
-  });
+ //  });
 
  </script>
 </html>
