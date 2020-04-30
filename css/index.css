@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 :root {
     --primary-color: #302AE6;
     --secondary-color: #536390;
