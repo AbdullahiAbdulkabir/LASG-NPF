@@ -8,6 +8,8 @@ Feel free to make a Pull Request
 - [Shuaib Oseni](https://github.com/shosenwales)
 - [Jude J Obiejesi](https://github.com/JaybeeClassical)
 - [Sdkcodes](https://github.com/sdkcodes)
+- [dabsclement](https://github.com/dabsclement)
+- [Favourene](https://github.com/Favourene)
 
 
 [Check live](http://emajency.com)
